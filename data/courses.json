@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Основы JavaScript",
+        "description": "Этот курс идеально подходит для начинающих. Узнайте, как работать с переменными, циклами и функциями.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 2,
+        "title": "Продвинутый JavaScript",
+        "description": "Погрузитесь в асинхронное программирование, работу с API и современный JavaScript.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 3,
+        "title": "Алгоритмы на JavaScript",
+        "description": "Изучите базовые алгоритмы и структуры данных, необходимые для эффективного программирования.",
+        "image": "https://via.placeholder.com/300x200"
+    }
+]
