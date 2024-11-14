@@ -1,29 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
-    loadCourses();
+    const isMainPage = window.location.pathname.includes("index.html");
+    loadCourses(isMainPage);
 });
 
-// Функция для загрузки курсов
-function loadCourses() {
-    fetch("../data/courses.json")
-        .then((response) => response.json())
-        .then((courses) => {
-            const coursesList = document.getElementById("courses-list");
-            coursesList.innerHTML = ""; // Очищаем контейнер курсов
+// Функция загрузки курсов из JSON файла
+async function loadCourses(isMainPage = false) {
+    try {
+        const response = await fetch("../data/courses.json");
+        const courses = await response.json();
 
-            courses.forEach((course) => {
-                const courseCard = createCourseCard(course);
-                coursesList.appendChild(courseCard);
-            });
-        })
-        .catch((error) => {
-            console.error("Ошибка загрузки курсов:", error);
-        });
+        // Если на главной странице, показываем только первые три курса
+        const displayedCourses = isMainPage ? courses.slice(0, 3) : courses;
+        displayCourses(displayedCourses);
+    } catch (error) {
+        console.error("Ошибка загрузки курсов:", error);
+    }
+}
+
+// Функция отображения курсов на странице
+function displayCourses(courses) {
+    const coursesList = document.getElementById("courses-list");
+    coursesList.innerHTML = ""; // Очищаем контейнер курсов
+
+    courses.forEach((course) => {
+        const courseCard = createCourseCard(course);
+        coursesList.appendChild(courseCard);
+    });
 }
 
 // Функция для создания карточки курса
 function createCourseCard(course) {
     const col = document.createElement("div");
-    col.classList.add("col-md-4");
+    col.classList.add("col-md-4", "mb-4");
 
     const card = document.createElement("div");
     card.classList.add("card", "course-card", "shadow-sm");

@@ -1,20 +1,92 @@
 [
     {
         "id": 1,
-        "title": "Основы JavaScript",
-        "description": "Этот курс идеально подходит для начинающих. Узнайте, как работать с переменными, циклами и функциями.",
+        "title": "Variables in JavaScript",
+        "description": "Learn how to declare and use variables in JavaScript.",
         "image": "https://via.placeholder.com/300x200"
     },
     {
         "id": 2,
-        "title": "Продвинутый JavaScript",
-        "description": "Погрузитесь в асинхронное программирование, работу с API и современный JavaScript.",
+        "title": "Data Types in JavaScript",
+        "description": "Understand different data types in JavaScript and their uses.",
         "image": "https://via.placeholder.com/300x200"
     },
     {
         "id": 3,
-        "title": "Алгоритмы на JavaScript",
-        "description": "Изучите базовые алгоритмы и структуры данных, необходимые для эффективного программирования.",
+        "title": "If-Else Statements in JavaScript",
+        "description": "Explore conditional statements and control flow.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 4,
+        "title": "Loops in JavaScript",
+        "description": "Learn about looping structures and how to iterate over data.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 5,
+        "title": "Functions in JavaScript",
+        "description": "Understand how to create and use functions.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 6,
+        "title": "Arrays in JavaScript",
+        "description": "Learn about arrays and methods to manipulate array data.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 7,
+        "title": "Objects in JavaScript",
+        "description": "Discover objects and their importance in JavaScript.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 8,
+        "title": "Scope and Closures",
+        "description": "Explore variable scope and closures in JavaScript.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 9,
+        "title": "DOM Manipulation",
+        "description": "Learn to manipulate the Document Object Model with JavaScript.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 10,
+        "title": "Events in JavaScript",
+        "description": "Understand how to handle user interactions with events.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 11,
+        "title": "ES6 and Modern JavaScript",
+        "description": "Dive into new features introduced in ES6 and beyond.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 12,
+        "title": "Error Handling in JavaScript",
+        "description": "Learn methods to handle errors and exceptions.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 13,
+        "title": "Async JavaScript and Promises",
+        "description": "Explore asynchronous programming and using Promises.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 14,
+        "title": "Modules in JavaScript",
+        "description": "Understand modularity and how to organize code with modules.",
+        "image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "id": 15,
+        "title": "Regular Expressions",
+        "description": "Learn about regular expressions and pattern matching in JavaScript.",
         "image": "https://via.placeholder.com/300x200"
     }
 ]
