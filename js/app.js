@@ -66,3 +66,5 @@ function createCourseCard(course) {
 
     return col;
 }
+
+// Function to toggle the sidebar visibility

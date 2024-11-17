@@ -20,6 +20,6 @@
   transform: scale(1.05);
 }
 
-/* .active {
-  color: #f0dc4e;
-} */
+i {
+  padding: 5px;
+}

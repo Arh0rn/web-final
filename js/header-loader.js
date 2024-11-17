@@ -23,9 +23,9 @@ function getHeaderPath() {
 
     // Проверяем, если мы находимся на странице курсов (например, courses.html или других страницах с курсами)
     if (currentPath.includes("courses")) {
-        return "../../../components/header.html"; // Путь для страницы courses
+        return "/components/header.html"; // Путь для страницы courses, абсолютный путь от корня
     } else {
-        return "../components/header.html"; // Путь для стандартной страницы (например, main page)
+        return "/components/header.html"; // Путь для стандартной страницы (например, main page), абсолютный путь от корня
     }
 }
 
@@ -44,9 +44,4 @@ function highlightActivePage() {
             link.classList.remove("active"); // Убираем класс active для остальных ссылок
         }
     });
-}
-
-function toggleNavbar() {
-    const navbar = document.getElementById("navbarNav-h");
-    navbar.classList.toggle("show-h");
 }

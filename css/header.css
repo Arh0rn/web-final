@@ -1,22 +1,10 @@
-/* Reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-}
-
 /* Header Styles */
 header {
   background-color: #343a40; /* Matches bg-dark */
   color: #fff; /* Matches text-white */
   padding: 0.5rem 0;
+  position: relative; /* Ensure it stays at the top */
+  z-index: 10; /* Keep the header above the sidebar */
 }
 
 .container-h {
