@@ -11,7 +11,7 @@
   top: 100px;
   left: 40px; /* Add indentation on the left */
   width: 250px; /* Set the width of the sidebar */
-  height: calc(100vh - 150px); /* Full height minus the top offset */
+  height: calc(100vh - 200px); /* Full height minus the top offset */
   background-color: rgb(52, 58, 64); /* Sidebar background */
   color: #fff; /* Set text color to white */
   padding: 20px;
@@ -29,7 +29,8 @@
 /* Sidebar Header */
 .sidebar h2 {
   margin-top: 0;
-  font-size: 20px;
+  padding-bottom: 1em;
+  font-size: 1em;
   color: #fff; /* Ensure header text is white */
 }
 
@@ -42,19 +43,19 @@
 
 /* List items in sidebar */
 .sidebar ul li {
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 /* Links in the sidebar */
 .sidebar ul li a {
   text-decoration: none;
   color: inherit; /* Inherit color from parent (white in this case) */
-  font-size: 16px;
+  font-size: 20px;
   transition: color 0.3s;
 }
 
 .sidebar ul li a:hover {
-  color: #ffc107;
+  color: #ffd65a;
 }
 
 /* Button for hiding/showing the sidebar */
@@ -75,4 +76,9 @@
 /* Optional: Button hover effect */
 .sidebar-toggle-button:hover {
   background-color: rgb(85, 98, 112);
+}
+
+/* Active link style */
+.sidebar ul li a.active {
+  color: #ffc107; /* Yellow color */
 }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../../assets/JavaScript-logo.png"
+    />
+    <title>Question 3</title>
+    <script
+      src="https://kit.fontawesome.com/3900e9a0e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../../css/header.css" />
+    <link rel="stylesheet" href="../../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <link rel="stylesheet" href="../../../css/course-page.css" />
+    <style>
+      /* Smooth background color change */
+      main {
+        transition: background-color 1s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <div class="content" style="flex: 1; padding: 20px">
+      <div class="sidebar">
+        <h2>Course 2: Variables in JavaScript</h2>
+        <ul>
+          <li><a href="c2-1.html">What is Variables</a></li>
+          <li><a href="c2-2.html">Variables in JavaScript</a></li>
+          <li><a href="c2-3.html">Question 1</a></li>
+          <li><a href="c2-4.html">Question 2</a></li>
+          <li><a href="c2-5.html">Question 3</a></li>
+        </ul>
+      </div>
+      <main class="container mt-4 qestion-block">
+        <h1>Question 3</h1>
+        <br />
+        <h3>
+          Which keyword in JavaScript is used for declaring variables that
+          cannot be reassigned?
+        </h3>
+        <br />
+        <form id="quiz-form">
+          <div>
+            <input type="radio" id="option-a" name="question" value="a" />
+            <label for="option-a"> var</label>
+          </div>
+          <div>
+            <input type="radio" id="option-b" name="question" value="b" />
+            <label for="option-b"> let</label>
+          </div>
+          <div>
+            <input type="radio" id="option-d" name="question" value="d" />
+            <label for="option-d"> static</label>
+          </div>
+          <div>
+            <input type="radio" id="option-c" name="question" value="c" />
+            <label for="option-c"> const</label>
+          </div>
+          <div>
+            <input type="radio" id="option-e" name="question" value="e" />
+            <label for="option-e"> final</label>
+          </div>
+          <div>
+            <input type="radio" id="option-f" name="question" value="f" />
+            <label for="option-f"> dynamic</label>
+          </div>
+          <button type="button" class="custom-btn" onclick="checkAnswer()">
+            Submit
+          </button>
+        </form>
+        <div id="feedback" style="display: none"></div>
+      </main>
+    </div>
+
+    <div id="footer-container"></div>
+    <script src="../../../js/app.js"></script>
+    <script src="../../../js/header-loader.js"></script>
+    <script>
+      function checkAnswer() {
+        const selectedOption = document.querySelector(
+          'input[name="question"]:checked'
+        );
+        const feedback = document.getElementById("feedback");
+        const mainContent = document.querySelector("main");
+
+        if (!selectedOption) {
+          alert("Please select an answer.");
+          return;
+        }
+
+        if (selectedOption.value === "c") {
+          mainContent.style.backgroundColor = "#adf7c6"; // Green on correct answer
+          feedback.style.display = "block";
+          feedback.textContent =
+            "Congratulations! That is the correct answer🥳";
+        } else {
+          mainContent.style.backgroundColor = "#ffdbdb"; // Red on incorrect answer
+          feedback.style.display = "block";
+          feedback.textContent = "Everyone makes mistakes😃";
+        }
+      }
+    </script>
+  </body>
+</html>

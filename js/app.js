@@ -55,7 +55,7 @@ function createCourseCard(course) {
     const link = document.createElement("a");
     link.href = course.link;
     link.classList.add("btn", "btn-warning");
-    link.textContent = "Начать курс";
+    link.textContent = "Start";
 
     cardBody.appendChild(title);
     cardBody.appendChild(description);
@@ -68,3 +68,13 @@ function createCourseCard(course) {
 }
 
 // Function to toggle the sidebar visibility
+window.addEventListener("DOMContentLoaded", (event) => {
+    const links = document.querySelectorAll(".sidebar ul li a"); // Get all the sidebar links
+    const currentUrl = window.location.href; // Get the current page URL
+
+    links.forEach((link) => {
+        if (currentUrl.includes(link.href)) {
+            link.classList.add("active"); // Add active class to the matching link
+        }
+    });
+});
