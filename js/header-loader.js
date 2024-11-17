@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function loadHeader() {
-    fetch("../components/header.html")
+    const path = getHeaderPath();
+
+    fetch(path)
         .then((response) => response.text())
         .then((data) => {
             document.getElementById("header-container").innerHTML = data;
@@ -13,6 +15,18 @@ function loadHeader() {
         .catch((error) => {
             console.error("Ошибка загрузки header:", error);
         });
+}
+
+// Функция для определения правильного пути к header.html
+function getHeaderPath() {
+    const currentPath = window.location.pathname;
+
+    // Проверяем, если мы находимся на странице курсов (например, courses.html или других страницах с курсами)
+    if (currentPath.includes("courses")) {
+        return "../../../components/header.html"; // Путь для страницы courses
+    } else {
+        return "../components/header.html"; // Путь для стандартной страницы (например, main page)
+    }
 }
 
 function highlightActivePage() {
@@ -30,4 +44,9 @@ function highlightActivePage() {
             link.classList.remove("active"); // Убираем класс active для остальных ссылок
         }
     });
+}
+
+function toggleNavbar() {
+    const navbar = document.getElementById("navbarNav-h");
+    navbar.classList.toggle("show-h");
 }

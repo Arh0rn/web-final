@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What Are Variables in Programming?</title>
+    <link rel="stylesheet" href="../../../css/header.css" />
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <link rel="stylesheet" href="../../../css/course-page.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <main class="container mt-4">
+      <h1>Variables in JavaScript: var, let, and const</h1>
+      <section>
+        <p>
+          In JavaScript, variables are used to store and manipulate data, just
+          like in other programming languages. However, JavaScript provides
+          three keywords to declare variables: <code>var</code>,
+          <code>let</code>, and <code>const</code>. Each has unique behavior and
+          use cases.
+        </p>
+        <h2><code>var</code></h2>
+        <ul>
+          <li>
+            <strong>Scope:</strong> Function-scoped. If declared inside a
+            function, it’s only accessible within that function.
+          </li>
+          <li>
+            <strong>Hoisting:</strong> Variables declared with
+            <code>var</code> are "hoisted," meaning they can be used before
+            their declaration (though their value will be
+            <code>undefined</code> until the actual assignment).
+          </li>
+        </ul>
+        <pre>
+<code>var x = 10;
+console.log(x); // Output: 10
+</code>
+      </pre>
+        <h2><code>let</code></h2>
+        <ul>
+          <li>
+            <strong>Scope:</strong> Block-scoped. Accessible only within the
+            block <code>{}</code> where it’s defined.
+          </li>
+          <li>
+            <strong>Reassignment:</strong> The value of a
+            <code>let</code> variable can be changed.
+          </li>
+        </ul>
+        <pre>
+<code>let y = 20;
+y = 30; // Allowed
+console.log(y); // Output: 30
+</code>
+      </pre>
+        <h2><code>const</code></h2>
+        <ul>
+          <li><strong>Scope:</strong> Block-scoped, like <code>let</code>.</li>
+          <li>
+            <strong>Reassignment:</strong> Cannot be reassigned after
+            declaration. It’s used for constants or values that should not
+            change.
+          </li>
+        </ul>
+        <pre>
+<code>const z = 40;
+// z = 50; // Error: Assignment to constant variable
+console.log(z); // Output: 40
+</code>
+      </pre>
+        <h2>Key Differences</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>var</th>
+              <th>let</th>
+              <th>conste</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Scope</strong></td>
+              <td>Function-scoped</td>
+              <td>Block-scoped</td>
+              <td>Block-scoped</td>
+            </tr>
+            <tr>
+              <td><strong>Hoisting</strong></td>
+              <td>Yes</td>
+              <td>Yes (but in TDZ*)</td>
+              <td>Yes (but in TDZ*)</td>
+            </tr>
+            <tr>
+              <td><strong>Reassignable</strong></td>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          *TDZ: Temporal Dead Zone – the variable exists but cannot be used
+          until after its declaration.
+        </p>
+        <p>
+          <strong>Conclusion:</strong> For modern JavaScript, prefer
+          <code>let</code> and <code>const</code> for better scoping and
+          maintainability. Use <code>const</code> by default and switch to
+          <code>let</code> only when you need to reassign a variable. Avoid
+          <code>var</code> unless maintaining legacy code.
+        </p>
+      </section>
+    </main>
+    <div id="footer-container"></div>
+    <script src="../../../js/header-loader.js"></script>
+  </body>
+</html>

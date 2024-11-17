@@ -53,7 +53,7 @@ function createCourseCard(course) {
     description.textContent = course.description;
 
     const link = document.createElement("a");
-    link.href = "#";
+    link.href = course.link;
     link.classList.add("btn", "btn-warning");
     link.textContent = "Начать курс";
 
