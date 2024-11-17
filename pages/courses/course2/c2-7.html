@@ -13,6 +13,19 @@
       src="https://kit.fontawesome.com/3900e9a0e8.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Add Prism.js CSS for syntax highlighting -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="../../../css/header.css" />
     <link rel="stylesheet" href="../../../css/sidebar.css" />
     <link rel="stylesheet" href="../../../css/style.css" />
@@ -34,33 +47,27 @@
           <li><a href="c2-7.html">Task 1</a></li>
         </ul>
       </div>
-      <main class="container mt-4 qestion-block">
-        <h1>Qestion 1</h1>
+      <main class="container mt-4 question-block">
+        <h1>Question 5</h1>
         <br />
-        <h3>What is the purpose of a variable in programming?</h3>
-        <br />
-        <form id="quiz-form">
-          <div>
-            <input type="radio" id="option-b" name="question" value="b" />
-            <label for="option-b"> To store and manipulate data</label>
-          </div>
-          <div>
-            <input type="radio" id="option-a" name="question" value="a" />
-            <label for="option-a"> To execute loops</label>
-          </div>
-          <div>
-            <input type="radio" id="option-c" name="question" value="c" />
-            <label for="option-c"> To control program flow</label>
-          </div>
-          <div>
-            <input type="radio" id="option-d" name="question" value="d" />
-            <label for="option-d"> To define functions</label>
-          </div>
-          <button type="button" class="custom-btn" onclick="checkAnswer()">
-            Submit
-          </button>
-        </form>
-        <div id="feedback" style="display: none"></div>
+        <h3>We have this program:</h3>
+        <!-- Use <pre> and <code> for proper code block formatting -->
+        <pre><code class="language-js">
+var a = 20;
+var b = 10;
+a = a + b + 20;
+console.log(a);
+        </code></pre>
+        <h3>What will be the output of this program?</h3>
+        <input
+          type="text"
+          id="user-answer"
+          placeholder="Enter your answer..."
+        />
+        <button type="button" class="custom-btn" onclick="checkAnswer()">
+          Submit
+        </button>
+        <div id="feedback" style="display: none; margin-top: 20px"></div>
       </main>
     </div>
 
@@ -69,26 +76,18 @@
     <script src="../../../js/header-loader.js"></script>
     <script>
       function checkAnswer() {
-        const selectedOption = document.querySelector(
-          'input[name="question"]:checked'
-        );
+        const userAnswer = document.getElementById("user-answer").value.trim();
         const feedback = document.getElementById("feedback");
-        const mainContent = document.querySelector("main");
 
-        if (!selectedOption) {
-          alert("Please select an answer.");
-          return;
-        }
-
-        if (selectedOption.value === "b") {
-          document.body.style.backgroundColor = "#adf7c6";
+        // Check if the user answer is correct
+        if (userAnswer == "50") {
           feedback.style.display = "block";
-          feedback.textContent =
-            "Congratulations! That is the correct answer🥳";
+          feedback.textContent = "Correct! The output will be 50.";
+          document.body.style.backgroundColor = "#adf7c6"; // Green for correct
         } else {
-          document.body.style.backgroundColor = "#ffdbdb";
           feedback.style.display = "block";
-          feedback.textContent = "Everyone makes mistakes😃";
+          feedback.textContent = "Try again! The correct answer is 50.";
+          document.body.style.backgroundColor = "#ffdbdb"; // Red for incorrect
         }
       }
     </script>

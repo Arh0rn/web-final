@@ -1,0 +1,130 @@
+/* Full height layout with small margins */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  height: calc(100vh - 60px); /* Subtract header height */
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 100%; /* Ensure content stays within screen */
+  width: 100%;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure content doesn't overflow the card */
+}
+
+#codeInput {
+  flex: 1;
+  width: 100%;
+  height: calc(100% - 60px); /* Adjust height considering padding and button */
+  padding: 10px;
+  font-family: monospace;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none; /* Disable resizing */
+  box-sizing: border-box; /* Include padding and border in width/height calculation */
+}
+
+#console {
+  flex: 1; /* Make console take remaining space in the card */
+  height: 100%; /* Take full height of the card */
+  background: #333;
+  color: white;
+  padding: 10px;
+  font-family: monospace;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  border-radius: 8px; /* Rounded corners for the console */
+  box-sizing: border-box; /* Ensure padding is included in height calculation */
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ffc107;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000;
+}
+
+.btn:hover {
+  background-color: #e0a800;
+}
+
+/* Add a container for the size control buttons */
+.size-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cardheader {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Distribute space between elements */
+  align-items: center; /* Vertically center the header and buttons */
+  width: 100%; /* Ensure it takes full width */
+}
+.custom-btn {
+  display: inline-block;
+  font-weight: 400px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1em;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffc107;
+  border-color: #ffc107;
+  margin: 1em;
+}
+
+.custom-btn:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+/* Active effect for the button */
+.custom-btn:active {
+  background-color: #c69500; /* Even darker yellow on active */
+  border-color: #c69500; /* Darker border when the button is clicked */
+}
+
+/* Focus effect for accessibility */
+.custom-btn:focus {
+  outline: none; /* Removes the default outline */
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5); /* Focus ring with a subtle yellow color */
+}
+
+/* Syntax Highlighting classes */
+.keyword {
+  color: #d74b99; /* Pink color for keywords */
+  font-weight: bold;
+}
+
+.variable {
+  color: #6a5acd; /* Purple color for variables */
+}

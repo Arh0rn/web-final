@@ -17,12 +17,6 @@
     <link rel="stylesheet" href="../../../css/sidebar.css" />
     <link rel="stylesheet" href="../../../css/style.css" />
     <link rel="stylesheet" href="../../../css/course-page.css" />
-    <style>
-      /* Smooth background color change */
-      main {
-        transition: background-color 1s ease-in-out;
-      }
-    </style>
   </head>
   <body>
     <div id="header-container"></div>
@@ -33,49 +27,51 @@
         <ul>
           <li><a href="c2-1.html">What is Variables</a></li>
           <li><a href="c2-2.html">Variables in JavaScript</a></li>
-          <li><a href="c2-3.html">Question 1</a></li>
-          <li><a href="c2-4.html">Question 2</a></li>
-          <li><a href="c2-5.html">Question 3</a></li>
+          <li><a href="c2-3.html">Qestion 1</a></li>
+          <li><a href="c2-4.html">Qestion 2</a></li>
+          <li><a href="c2-5.html">Qestion 3</a></li>
+          <li><a href="c2-6.html">Qestion 4</a></li>
+          <li><a href="c2-7.html">Task 1</a></li>
         </ul>
       </div>
-      <main class="container mt-4 qestion-block">
-        <h1>Question 3</h1>
+      <main class="container mt-4 question-block">
+        <h1>Question 5</h1>
         <br />
         <h3>
-          Which keyword in JavaScript is used for declaring variables that
-          cannot be reassigned?
+          Which of the following are characteristics of <code>let</code> in
+          JavaScript? (Select all that apply)
         </h3>
         <br />
         <form id="quiz-form">
           <div>
-            <input type="radio" id="option-a" name="question" value="a" />
-            <label for="option-a"> var</label>
+            <input type="checkbox" id="option-a" name="question" value="a" />
+            <label for="option-a">Block-scoped</label>
           </div>
           <div>
-            <input type="radio" id="option-b" name="question" value="b" />
-            <label for="option-b"> let</label>
+            <input type="checkbox" id="option-b" name="question" value="b" />
+            <label for="option-b">Cannot be reassigned</label>
           </div>
           <div>
-            <input type="radio" id="option-d" name="question" value="d" />
-            <label for="option-d"> static</label>
+            <input type="checkbox" id="option-c" name="question" value="c" />
+            <label for="option-c">Function-scoped</label>
           </div>
           <div>
-            <input type="radio" id="option-c" name="question" value="c" />
-            <label for="option-c"> const</label>
+            <input type="checkbox" id="option-d" name="question" value="d" />
+            <label for="option-d">Can be reassigned</label>
           </div>
           <div>
-            <input type="radio" id="option-e" name="question" value="e" />
-            <label for="option-e"> final</label>
+            <input type="checkbox" id="option-e" name="question" value="e" />
+            <label for="option-e">Hoisted to the top of the code</label>
           </div>
           <div>
-            <input type="radio" id="option-f" name="question" value="f" />
-            <label for="option-f"> dynamic</label>
+            <input type="checkbox" id="option-f" name="question" value="f" />
+            <label for="option-f">Cannot be used before declaration</label>
           </div>
-          <button type="button" class="custom-btn" onclick="checkAnswer()">
+          <button type="button" class="custom-btn" onclick="checkAnswers()">
             Submit
           </button>
         </form>
-        <div id="feedback" style="display: none"></div>
+        <div id="feedback" style="display: none; margin-top: 20px"></div>
       </main>
     </div>
 
@@ -83,27 +79,42 @@
     <script src="../../../js/app.js"></script>
     <script src="../../../js/header-loader.js"></script>
     <script>
-      function checkAnswer() {
-        const selectedOption = document.querySelector(
-          'input[name="question"]:checked'
-        );
+      function checkAnswers() {
+        const correctAnswers = {
+          a: "Block-scoped",
+          d: "Can be reassigned",
+          e: "Hoisted to the top of the code",
+        }; // Correct options with their labels
+
+        const selectedOptions = Array.from(
+          document.querySelectorAll('input[name="question"]:checked')
+        ).map((option) => option.value);
+
         const feedback = document.getElementById("feedback");
         const mainContent = document.querySelector("main");
 
-        if (!selectedOption) {
-          alert("Please select an answer.");
-          return;
-        }
+        // Compare selected options with correct answers
+        const isCorrect =
+          selectedOptions.length === Object.keys(correctAnswers).length &&
+          selectedOptions.every((option) =>
+            Object.keys(correctAnswers).includes(option)
+          );
 
-        if (selectedOption.value === "c") {
-          mainContent.style.backgroundColor = "#adf7c6"; // Green on correct answer
+        if (isCorrect) {
+          document.body.style.backgroundColor = "#adf7c6"; // Green for correct
           feedback.style.display = "block";
           feedback.textContent =
-            "Congratulations! That is the correct answer🥳";
+            "Great job! Those are the correct characteristics of let!";
         } else {
-          mainContent.style.backgroundColor = "#ffdbdb"; // Red on incorrect answer
+          document.body.style.backgroundColor = "#ffdbdb"; // Red for incorrect
           feedback.style.display = "block";
-          feedback.textContent = "Everyone makes mistakes😃";
+
+          // Show correct answers using their labels
+          const correctText = Object.values(correctAnswers)
+            .map((text) => `"${text}"`)
+            .join(", ");
+
+          feedback.textContent = `Some answers are incorrect. The correct answers are: ${correctText}.`;
         }
       }
     </script>

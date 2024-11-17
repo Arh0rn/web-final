@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../../assets/JavaScript-logo.png"
+    />
+    <title>Question 4</title>
+    <script
+      src="https://kit.fontawesome.com/3900e9a0e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="../../../css/header.css" />
+    <link rel="stylesheet" href="../../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <link rel="stylesheet" href="../../../css/course-page.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <div class="content" style="flex: 1; padding: 20px">
+      <div class="sidebar">
+        <h2>Course 2: Variables in JavaScript</h2>
+        <ul>
+          <li><a href="c2-1.html">What is Variables</a></li>
+          <li><a href="c2-2.html">Variables in JavaScript</a></li>
+          <li><a href="c2-3.html">Qestion 1</a></li>
+          <li><a href="c2-4.html">Qestion 2</a></li>
+          <li><a href="c2-5.html">Qestion 3</a></li>
+          <li><a href="c2-6.html">Qestion 4</a></li>
+          <li><a href="c2-7.html">Task 1</a></li>
+        </ul>
+      </div>
+      <main class="container mt-4 question-block">
+        <h1>Question 5</h1>
+        <br />
+        <h3>We have this program:</h3>
+
+        <pre><code class="language-js">
+var a = 20;
+var b = 10;
+a = a + b + 20;
+console.log(a);
+        </code></pre>
+        <h3>What will be the output of this program?</h3>
+        <input
+          type="text"
+          id="user-answer"
+          placeholder="Enter your answer..."
+        />
+        <button type="button" class="custom-btn" onclick="checkAnswer()">
+          Submit
+        </button>
+        <div id="feedback" style="display: none; margin-top: 20px"></div>
+      </main>
+    </div>
+
+    <div id="footer-container"></div>
+    <script src="../../../js/app.js"></script>
+    <script src="../../../js/header-loader.js"></script>
+    <script>
+      function checkAnswer() {
+        const userAnswer = document.getElementById("user-answer").value.trim();
+        const feedback = document.getElementById("feedback");
+
+        // Check if the user answer is correct
+        if (userAnswer == "50") {
+          feedback.style.display = "block";
+          feedback.textContent = "Correct! The output will be 50.";
+          document.body.style.backgroundColor = "#adf7c6"; // Green for correct
+        } else {
+          feedback.style.display = "block";
+          feedback.textContent = "Try again! The correct answer is 50.";
+          document.body.style.backgroundColor = "#ffdbdb"; // Red for incorrect
+        }
+      }
+    </script>
+  </body>
+</html>

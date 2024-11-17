@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../assets/JavaScript-logo.png" />
+    <title>Code Playground</title>
+
+    <script
+      src="https://kit.fontawesome.com/3900e9a0e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/sandbox.css" />
+  </head>
+  <body>
+    <!-- Включаем header -->
+    <div id="header-container"></div>
+
+    <!-- Секция с кодом и выводом -->
+    <section class="courses-section py-5">
+      <div class="container">
+        <!-- Left Card (Code Input) -->
+        <div class="card">
+          <div class="cardheader">
+            <h3>Write your code here</h3>
+            <div class="sizebuttons">
+              <button
+                class="custom-btn"
+                onclick="changeFontSize('code', 'decrease')"
+              >
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <button
+                class="custom-btn"
+                onclick="changeFontSize('code', 'increase')"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Textarea to input JavaScript code -->
+          <textarea
+            id="codeInput"
+            placeholder="Write your JavaScript code here..."
+          >
+console.log('Hello, World!');</textarea
+          >
+          <div class="size-controls"></div>
+          <button class="custom-btn" onclick="runCode()">Run Code</button>
+        </div>
+
+        <!-- Right Card (Console Output) -->
+        <div class="card">
+          <div class="cardheader">
+            <h3>Output</h3>
+            <div class="sizebuttons">
+              <button
+                class="custom-btn"
+                onclick="changeFontSize('console', 'decrease')"
+              >
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <button
+                class="custom-btn"
+                onclick="changeFontSize('console', 'increase')"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div id="console"></div>
+          <div class="size-controls"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/header-loader.js"></script>
+    <script src="../js/sandbox.js"></script>
+  </body>
+</html>
