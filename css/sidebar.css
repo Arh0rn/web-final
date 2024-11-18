@@ -8,10 +8,11 @@
 /* Sidebar Styling */
 .sidebar {
   /* Fixed position on the left */
+  position: fixed;
   top: 130px;
   left: 40px; /* Add indentation on the left */
   width: 250px; /* Set the width of the sidebar */
-  height: calc(100vh - 200px); /* Full height minus the top offset */
+  height: calc(100vh - 235px); /* Full height minus the top offset */
   background-color: rgb(52, 58, 64); /* Sidebar background */
   color: #fff; /* Set text color to white */
   padding: 20px;

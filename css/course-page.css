@@ -16,7 +16,9 @@ body {
 
   transition: background-color 1s ease;
 }
-
+.content {
+  display: flex; /* Flex нужен для расположения sidebar и main */
+}
 /* Main Content */
 main {
   max-width: 900px;
