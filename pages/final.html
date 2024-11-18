@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../assets/heart.png" />
+    <title>Congratulations - Certificate</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://kit.fontawesome.com/3900e9a0e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/final.css" />
+
+    <style>
+      .certificate-container {
+        text-align: center;
+        margin-top: 50px;
+      }
+      .certificate-container img {
+        max-width: 100%;
+        height: auto;
+      }
+      .congratulations-text {
+        font-size: 1.5rem;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      .name-input {
+        padding: 0.375rem 0.75rem;
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        border: 1px solid #ccc;
+        color: #000000;
+        background-color: #fff;
+        width: 200px; /* You can adjust the width as needed */
+        margin: 1em;
+        height: 2.5em; /* Same height as button */
+      }
+      .name-input:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5); /* Focus ring with a subtle yellow color */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <main>
+      <div class="certificate-container">
+        <!-- Replace with actual certificate image -->
+        <canvas id="certificateCanvas" width="500" height="500"></canvas>
+        <div class="congratulations-text">
+          <p>Congratulations on completing the JavaScript Final Exam!</p>
+          <br />
+          <p>
+            You have successfully passed the exam and earned your certificate.
+          </p>
+        </div>
+        <br /><br />
+        <input
+          type="text"
+          id="name-input"
+          class="name-input"
+          placeholder="Enter your name"
+        />
+        <button class="custom-btn" id="download-certificate">
+          Download Certificate
+        </button>
+      </div>
+    </main>
+
+    <script src="../js/header-loader.js"></script>
+    <script>
+      const canvas = document.getElementById("certificateCanvas");
+      const ctx = canvas.getContext("2d");
+
+      // Load the certificate image onto the canvas
+      const certificateImage = new Image();
+      certificateImage.src = "../assets/certificate.jpeg"; // Path to your certificate image
+
+      certificateImage.onload = function () {
+        ctx.drawImage(certificateImage, 0, 0, canvas.width, canvas.height);
+      };
+
+      // Update the canvas with the user's name
+      function updateNameOnCertificate() {
+        const name = document.getElementById("name-input").value;
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+        ctx.drawImage(certificateImage, 0, 0, canvas.width, canvas.height); // Redraw the certificate
+
+        // Set text style
+        ctx.font = "bold 40px monospace";
+        ctx.fillStyle = "rgb(250, 183, 30)";
+        ctx.textAlign = "center";
+        ctx.fillText(name, canvas.width / 2, canvas.height / 2 + 20); // Draw name at the specified position
+      }
+
+      // Listen for input changes and update name on certificate
+      document
+        .getElementById("name-input")
+        .addEventListener("input", updateNameOnCertificate);
+
+      // Download the certificate with the updated name
+      document
+        .getElementById("download-certificate")
+        .addEventListener("click", function () {
+          const link = document.createElement("a");
+          link.href = canvas.toDataURL("image/jpeg"); // Get canvas image as data URL
+          link.download = "certificate-with-name.jpg"; // File name for download
+          link.click();
+        });
+    </script>
+  </body>
+</html>

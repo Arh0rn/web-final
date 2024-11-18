@@ -1,4 +1,10 @@
-/* Full height layout with small margins */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 html,
 body {
   height: 100%;
@@ -10,7 +16,7 @@ body {
 .container {
   display: flex;
   gap: 10px;
-  height: calc(100vh - 60px); /* Subtract header height */
+  height: calc(100vh - 4em); /* Subtract header height */
   padding: 10px;
   box-sizing: border-box;
   max-width: 100%; /* Ensure content stays within screen */

@@ -1,0 +1,167 @@
+[
+    {
+        "question": "What is the correct syntax to declare a JavaScript variable?",
+        "code": "",
+        "options": [
+            "var myVariable;",
+            "variable myVariable;",
+            "let myVariable =;",
+            "const myVariable == 5;"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "What will the following code output?",
+        "code": "console.log(typeof 42);",
+        "options": [
+            "string",
+            "number",
+            "undefined",
+            "object"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "How do you write a single-line comment in JavaScript?",
+        "code": "",
+        "options": [
+            "< !−− This is a comment −−>",
+            "# This is a comment",
+            "// This is a comment",
+            "* This is a comment"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "What will the following code output?",
+        "code": "let x = 5;\nlet y = '5';\nconsole.log(x == y);",
+        "options": [
+            "true",
+            "false",
+            "undefined",
+            "Error"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of these array methods adds an item to the end of an array?",
+        "code": "",
+        "options": [
+            "push()",
+            "pop()",
+            "shift()",
+            "unshift()"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "What will the following code output?",
+        "code": "function test() {\n    console.log(this);\n}\ntest();",
+        "options": [
+            "undefined",
+            "null",
+            "Window or global object",
+            "test"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "What is the result of this code?",
+        "code": "let a = 10;\nconsole.log(a++);",
+        "options": [
+            "10",
+            "11",
+            "undefined",
+            "Error"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "What will the following code output?",
+        "code": "console.log(0.1 + 0.2 === 0.3);",
+        "options": [
+            "true",
+            "false",
+            "undefined",
+            "Error"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "How can you define a function in JavaScript?",
+        "code": "",
+        "options": [
+            "function myFunction() {}",
+            "let myFunction = function {};",
+            "func myFunction() {}",
+            "define myFunction() {}"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "What will the following code return?",
+        "code": "const fruits = [\"apple\", \"banana\", \"cherry\"];\nconsole.log(fruits[3]);",
+        "options": [
+            "\"apple\"",
+            "\"undefined\"",
+            "Error",
+            "\"cherry\""
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following correctly implements a for loop?",
+        "code": "",
+        "options": [
+            "for i = 0; i < 5; i++ {\n    console.log(i);\n}",
+            "for (let i = 0; i < 5; i++) {\n    console.log(i);\n}",
+            "for (i < 5; i++) {\n    console.log(i);\n}",
+            "for (let i = 0, i < 5, i++) {\n    console.log(i);\n}"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "What does the Array.prototype.map() method do?",
+        "code": "",
+        "options": [
+            "It creates a new array with calling funcion on every element.",
+            "It changes the original array by applying a function to each element.",
+            "It filters elements from the array.",
+            "It sorts the array in ascending order."
+        ],
+        "answer": 0
+    },
+    {
+        "question": "What will the following code output?",
+        "code": "const obj = { name: \"John\" };\nconst obj2 = obj;\nobj2.name = \"Jane\";\nconsole.log(obj.name);",
+        "options": [
+            "\"John\"",
+            "\"Jane\"",
+            "undefined",
+            "Error"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "How do you check if a variable is null in JavaScript?",
+        "code": "",
+        "options": [
+            "typeof variable === \"null\"",
+            "variable === null",
+            "variable == undefined",
+            "typeof variable == undefined"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "What will the following code output?",
+        "code": "setTimeout(() => {\n    console.log(\"Hello\");\n}, 0);\nconsole.log(\"World\");",
+        "options": [
+            "\"Hello\", then \"World\"",
+            "\"World\", then \"Hello\"",
+            "Error",
+            "undefined"
+        ],
+        "answer": 1
+    }
+]

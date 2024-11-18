@@ -8,7 +8,7 @@
 /* Sidebar Styling */
 .sidebar {
   position: fixed; /* Fixed position on the left */
-  top: 100px;
+  top: 130px;
   left: 40px; /* Add indentation on the left */
   width: 250px; /* Set the width of the sidebar */
   height: calc(100vh - 200px); /* Full height minus the top offset */

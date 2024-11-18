@@ -5,6 +5,8 @@ header {
   padding: 0.5rem 0;
   position: relative; /* Ensure it stays at the top */
   z-index: 10; /* Keep the header above the sidebar */
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .container-h {
