@@ -8,7 +8,7 @@
 /* Sidebar Styling */
 .sidebar {
   /* Fixed position on the left */
-  position: fixed;
+
   top: 130px;
   left: 40px; /* Add indentation on the left */
   width: 250px; /* Set the width of the sidebar */
@@ -24,7 +24,7 @@
 
 /* Sidebar Hidden (Moved off-screen) */
 .sidebar.hidden {
-  transform: translateX(-100%); /* Move sidebar off-screen to the left */
+  transform: translateX(-10%); /* Move sidebar off-screen to the left */
 }
 
 /* Sidebar Header */
