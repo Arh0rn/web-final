@@ -88,7 +88,6 @@
         const feedback = document.getElementById("feedback");
         const mainContent = document.querySelector("main");
 
-        // Compare selected options with correct answers
         const isCorrect =
           selectedOptions.length === Object.keys(correctAnswers).length &&
           selectedOptions.every((option) =>
@@ -96,15 +95,14 @@
           );
 
         if (isCorrect) {
-          document.body.style.backgroundColor = "#adf7c6"; // Green for correct
+          document.body.style.backgroundColor = "#adf7c6";
           feedback.style.display = "block";
           feedback.textContent =
             "Great job! Those are the correct characteristics of let!";
         } else {
-          document.body.style.backgroundColor = "#ffdbdb"; // Red for incorrect
+          document.body.style.backgroundColor = "#ffdbdb";
           feedback.style.display = "block";
 
-          // Show correct answers using their labels
           const correctText = Object.values(correctAnswers)
             .map((text) => `"${text}"`)
             .join(", ");

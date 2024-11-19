@@ -116,7 +116,7 @@
             "for i = 0; i < 5; i++ {\n    console.log(i);\n}",
             "for (let i = 0; i < 5; i++) {\n    console.log(i);\n}",
             "for (i < 5; i++) {\n    console.log(i);\n}",
-            "for (let i = 0, i < 5, i++) {\n    console.log(i);\n}"
+            "for (let i == 0, i < 5, i++) {\n    console.log(i);\n}"
         ],
         "answer": 1
     },

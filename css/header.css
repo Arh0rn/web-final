@@ -1,10 +1,9 @@
-/* Header Styles */
 header {
-  background-color: #343a40; /* Matches bg-dark */
-  color: #fff; /* Matches text-white */
+  background-color: #343a40;
+  color: #fff;
   padding: 0.5rem 0;
-  position: relative; /* Ensure it stays at the top */
-  z-index: 10; /* Keep the header above the sidebar */
+  position: relative;
+  z-index: 10;
   padding-top: 1em;
   padding-bottom: 1em;
 }
@@ -34,11 +33,11 @@ header {
 }
 
 .navbar-brand-h span {
-  padding-left: 1rem; /* Matches px-5 */
+  padding-left: 1rem;
 }
 
 .navbar-toggler-h {
-  display: none; /* Hidden by default */
+  display: none;
   background-color: #fff;
   border: none;
   padding: 0.5rem;
@@ -78,7 +77,7 @@ header {
 }
 
 .nav-link-h:hover {
-  color: #ffc107; /* Highlight color */
+  color: #ffc107;
 }
 
 .nav-link-h.active {
@@ -86,10 +85,9 @@ header {
   color: #ffc107;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .navbar-toggler-h {
-    display: block; /* Show toggle button on small screens */
+    display: block;
   }
 
   .navbar-collapse-h {
@@ -101,7 +99,7 @@ header {
   }
 
   .navbar-collapse-h.show-h {
-    display: flex; /* Show when toggled */
+    display: flex;
   }
 
   .nav-item-h {

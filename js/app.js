@@ -3,13 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     loadCourses(isMainPage);
 });
 
-// Функция загрузки курсов из JSON файла
 async function loadCourses(isMainPage = false) {
     try {
         const response = await fetch("../data/courses.json");
         const courses = await response.json();
 
-        // Если на главной странице, показываем только первые три курса
         const displayedCourses = isMainPage ? courses.slice(0, 3) : courses;
         displayCourses(displayedCourses);
     } catch (error) {
@@ -17,7 +15,6 @@ async function loadCourses(isMainPage = false) {
     }
 }
 
-// Функция отображения курсов на странице
 function displayCourses(courses) {
     const coursesList = document.getElementById("courses-list");
     coursesList.innerHTML = ""; // Очищаем контейнер курсов
@@ -28,7 +25,6 @@ function displayCourses(courses) {
     });
 }
 
-// Функция для создания карточки курса
 function createCourseCard(course) {
     const col = document.createElement("div");
     col.classList.add("col-md-4", "mb-4");
@@ -67,14 +63,13 @@ function createCourseCard(course) {
     return col;
 }
 
-// Function to toggle the sidebar visibility
 window.addEventListener("DOMContentLoaded", (event) => {
-    const links = document.querySelectorAll(".sidebar ul li a"); // Get all the sidebar links
-    const currentUrl = window.location.href; // Get the current page URL
+    const links = document.querySelectorAll(".sidebar ul li a");
+    const currentUrl = window.location.href;
 
     links.forEach((link) => {
         if (currentUrl.includes(link.href)) {
-            link.classList.add("active"); // Add active class to the matching link
+            link.classList.add("active");
         }
     });
 });

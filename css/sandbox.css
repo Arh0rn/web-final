@@ -16,10 +16,10 @@ body {
 .container {
   display: flex;
   gap: 10px;
-  height: calc(100vh - 4em); /* Subtract header height */
+  height: calc(100vh - 4em);
   padding: 10px;
   box-sizing: border-box;
-  max-width: 100%; /* Ensure content stays within screen */
+  max-width: 100%;
   width: 100%;
 }
 
@@ -33,33 +33,32 @@ body {
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Ensure content doesn't overflow the card */
+  overflow: hidden;
 }
-
 #codeInput {
   flex: 1;
   width: 100%;
-  height: calc(100% - 60px); /* Adjust height considering padding and button */
+  height: calc(100% - 60px);
   padding: 10px;
   font-family: monospace;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  resize: none; /* Disable resizing */
-  box-sizing: border-box; /* Include padding and border in width/height calculation */
+  resize: none;
+  box-sizing: border-box;
 }
 
 #console {
-  flex: 1; /* Make console take remaining space in the card */
-  height: 100%; /* Take full height of the card */
+  flex: 1;
+  height: 100%;
   background: #333;
   color: white;
   padding: 10px;
   font-family: monospace;
   overflow-y: auto;
   white-space: pre-wrap;
-  border-radius: 8px; /* Rounded corners for the console */
-  box-sizing: border-box; /* Ensure padding is included in height calculation */
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -76,7 +75,6 @@ body {
   background-color: #e0a800;
 }
 
-/* Add a container for the size control buttons */
 .size-controls {
   display: flex;
   gap: 10px;
@@ -84,10 +82,10 @@ body {
 }
 
 .cardheader {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Distribute space between elements */
-  align-items: center; /* Vertically center the header and buttons */
-  width: 100%; /* Ensure it takes full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 .custom-btn {
   display: inline-block;
@@ -113,24 +111,21 @@ body {
   border-color: #d39e00;
 }
 
-/* Active effect for the button */
 .custom-btn:active {
-  background-color: #c69500; /* Even darker yellow on active */
-  border-color: #c69500; /* Darker border when the button is clicked */
+  background-color: #c69500;
+  border-color: #c69500;
 }
 
-/* Focus effect for accessibility */
 .custom-btn:focus {
-  outline: none; /* Removes the default outline */
-  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5); /* Focus ring with a subtle yellow color */
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
 }
 
-/* Syntax Highlighting classes */
 .keyword {
-  color: #d74b99; /* Pink color for keywords */
+  color: #d74b99;
   font-weight: bold;
 }
 
 .variable {
-  color: #6a5acd; /* Purple color for variables */
+  color: #6a5acd;
 }

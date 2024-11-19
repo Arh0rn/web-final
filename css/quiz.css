@@ -1,4 +1,3 @@
-/* Reset */
 *,
 *::before,
 *::after {
@@ -86,15 +85,14 @@ input[type="radio"]:checked + label::before {
   border-color: #ffc107;
 }
 
-/* Styling for code blocks */
 pre {
-  background-color: #f5f5f5; /* Light gray background */
+  background-color: #f5f5f5;
   padding: 15px;
   border-radius: 8px;
   font-family: "Courier New", Courier, monospace;
   margin-top: 10px;
   font-size: 1em;
-  overflow-x: auto; /* Ensure horizontal scroll for long lines */
+  overflow-x: auto;
   border: 1px solid #ddd;
 }
 
@@ -103,7 +101,7 @@ code {
   padding: 2px 4px;
   border-radius: 4px;
   font-family: "Courier New", Courier, monospace;
-  color: #d6336c; /* Add color for code keywords if needed */
+  color: #d6336c;
 }
 
 .wrong-answer {
@@ -141,14 +139,12 @@ code {
   border-color: #d39e00;
 }
 
-/* Active effect for the button */
 .custom-btn:active {
-  background-color: #c69500; /* Even darker yellow on active */
-  border-color: #c69500; /* Darker border when the button is clicked */
+  background-color: #c69500;
+  border-color: #c69500;
 }
 
-/* Focus effect for accessibility */
 .custom-btn:focus {
-  outline: none; /* Removes the default outline */
-  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5); /* Focus ring with a subtle yellow color */
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
 }

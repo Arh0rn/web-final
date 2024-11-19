@@ -1,56 +1,47 @@
-/* Body Layout */
 .content {
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-/* Sidebar Styling */
 .sidebar {
-  /* Fixed position on the left */
-
   top: 130px;
-  left: 40px; /* Add indentation on the left */
-  width: 250px; /* Set the width of the sidebar */
-  height: calc(100vh - 235px); /* Full height minus the top offset */
-  background-color: rgb(52, 58, 64); /* Sidebar background */
-  color: #fff; /* Set text color to white */
+  left: 40px;
+  width: 250px;
+  height: calc(100vh - 235px);
+  background-color: rgb(52, 58, 64);
+  color: #fff;
   padding: 20px;
   box-sizing: border-box;
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for card effect */
-  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Sidebar Hidden (Moved off-screen) */
 .sidebar.hidden {
-  transform: translateX(-10%); /* Move sidebar off-screen to the left */
+  transform: translateX(-10%);
 }
 
-/* Sidebar Header */
 .sidebar h2 {
   margin-top: 0;
   padding-bottom: 1em;
   font-size: 1em;
-  color: #fff; /* Ensure header text is white */
+  color: #fff;
 }
 
-/* List styling for sidebar */
 .sidebar ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-/* List items in sidebar */
 .sidebar ul li {
   margin: 20px 0;
 }
 
-/* Links in the sidebar */
 .sidebar ul li a {
   text-decoration: none;
-  color: inherit; /* Inherit color from parent (white in this case) */
+  color: inherit;
   font-size: 20px;
   transition: color 0.3s;
 }
@@ -59,7 +50,6 @@
   color: #ffd65a;
 }
 
-/* Button for hiding/showing the sidebar */
 .sidebar-toggle-button {
   position: fixed;
   top: 100px;
@@ -71,15 +61,13 @@
   cursor: pointer;
   font-size: 18px;
   border-radius: 8px;
-  z-index: 1000; /* Ensure the button is on top */
+  z-index: 1000;
 }
 
-/* Optional: Button hover effect */
 .sidebar-toggle-button:hover {
   background-color: rgb(85, 98, 112);
 }
 
-/* Active link style */
 .sidebar ul li a.active {
-  color: #ffc107; /* Yellow color */
+  color: #ffc107;
 }

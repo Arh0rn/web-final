@@ -74,15 +74,15 @@ console.log(a);
         const userAnswer = document.getElementById("user-answer").value.trim();
         const feedback = document.getElementById("feedback");
 
-        // Check if the user answer is correct
+
         if (userAnswer == "50") {
           feedback.style.display = "block";
           feedback.textContent = "Correct! The output will be 50.";
-          document.body.style.backgroundColor = "#adf7c6"; // Green for correct
+          document.body.style.backgroundColor = "#adf7c6"; 
         } else {
           feedback.style.display = "block";
           feedback.textContent = "Try again! The correct answer is 50.";
-          document.body.style.backgroundColor = "#ffdbdb"; // Red for incorrect
+          document.body.style.backgroundColor = "#ffdbdb"; 
         }
       }
     </script>

@@ -15,10 +15,8 @@ function loadFooter() {
         });
 }
 
-// Function to determine the correct path to footer.html
 function getFooterPath() {
     const currentPath = window.location.pathname;
 
-    // If you want a different footer for specific pages, you can adjust the path here
-    return "/components/footer.html"; // Absolute path from root for footer
+    return "/components/footer.html";
 }

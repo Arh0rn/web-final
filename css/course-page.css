@@ -1,4 +1,3 @@
-/* General Reset */
 *,
 *::before,
 *::after {
@@ -7,7 +6,6 @@
   padding: 0;
 }
 
-/* Body Styling */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
@@ -17,9 +15,9 @@ body {
   transition: background-color 1s ease;
 }
 .content {
-  display: flex; /* Flex нужен для расположения sidebar и main */
+  display: flex;
 }
-/* Main Content */
+
 main {
   max-width: 900px;
   margin: 20px auto;
@@ -79,10 +77,9 @@ input[type="radio"] {
   display: none;
 }
 
-/* Custom radio button style */
 input[type="radio"] + label {
   position: relative;
-  padding-left: 30px; /* Space for custom button */
+  padding-left: 30px;
   cursor: pointer;
   display: inline-block;
   line-height: 20px;
@@ -101,18 +98,14 @@ input[type="radio"] + label::before {
   transition: background-color 0.3s, border-color 0.3s;
 }
 
-/* Custom radio button style when checked */
 input[type="radio"]:checked + label::before {
-  background-color: #ffc107; /* Green when checked */
-  border-color: #ffc107; /* Green border */
+  background-color: #ffc107;
+  border-color: #ffc107;
 }
 
-/* When radio button is hovered */
 input[type="radio"]:hover + label::before {
-  border-color: #777; /* Lighter border on hover */
+  border-color: #777;
 }
-
-/* Custom label text for checked radio */
 
 .custom-btn {
   display: inline-block;
@@ -138,26 +131,23 @@ input[type="radio"]:hover + label::before {
   border-color: #d39e00;
 }
 
-/* Active effect for the button */
 .custom-btn:active {
-  background-color: #c69500; /* Even darker yellow on active */
-  border-color: #c69500; /* Darker border when the button is clicked */
+  background-color: #c69500;
+  border-color: #c69500;
 }
 
-/* Focus effect for accessibility */
 .custom-btn:focus {
-  outline: none; /* Removes the default outline */
-  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5); /* Focus ring with a subtle yellow color */
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
 }
 
 input[type="checkbox"] {
-  display: none; /* Hide the default checkbox */
+  display: none;
 }
 
-/* Custom checkbox style */
 input[type="checkbox"] + label {
   position: relative;
-  padding-left: 30px; /* Space for the custom checkbox */
+  padding-left: 30px;
   cursor: pointer;
   display: inline-block;
   line-height: 20px;
@@ -170,30 +160,27 @@ input[type="checkbox"] + label::before {
   top: 0;
   width: 20px;
   height: 20px;
-  border-radius: 4px; /* Slightly rounded corners */
-  border: 2px solid #333; /* Default border */
+  border-radius: 4px;
+  border: 2px solid #333;
   background-color: #fff;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
-/* Custom checkbox style when checked */
 input[type="checkbox"]:checked + label::before {
-  background-color: #ffc107; /* Yellow when checked */
-  border-color: #ffc107; /* Yellow border */
+  background-color: #ffc107;
+  border-color: #ffc107;
 }
 
-/* Checkbox checkmark */
 input[type="checkbox"]:checked + label::after {
   position: absolute;
   left: 4px;
   top: 0;
   font-size: 16px;
-  color: #333; /* Checkmark color */
+  color: #333;
 }
 
-/* When checkbox is hovered */
 input[type="checkbox"]:hover + label::before {
-  border-color: #777; /* Lighter border on hover */
+  border-color: #777;
 }
 
 #user-answer {
@@ -204,13 +191,12 @@ input[type="checkbox"]:hover + label::before {
   border: 1px solid #ccc;
   color: #000000;
   background-color: #fff;
-  width: 200px; /* You can adjust the width as needed */
+  width: 200px;
   margin: 1em;
-  height: 2.5em; /* Same height as button */
+  height: 2.5em;
 }
 
-/* Focus effect for input */
 #user-answer:focus {
   outline: none;
-  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5); /* Focus ring with a subtle yellow color */
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
 }

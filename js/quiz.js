@@ -2,9 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".questions-container");
     const finishButton = document.querySelector("#finish-exam-button");
 
-    let questions = []; // To store questions fetched from JSON
+    let questions = [];
 
-    // Fetch the questions from the JSON file
     fetch("../data/questions.json")
         .then((response) => {
             if (!response.ok) {
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return response.json();
         })
         .then((data) => {
-            questions = data; // Save questions for later use
+            questions = data;
             displayQuestions(questions);
         })
         .catch((error) => {
@@ -52,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let allAnswered = true;
         let correctCount = 0;
 
-        // Check each question
         questions.forEach((question, index) => {
             const selected = document.querySelector(
                 `input[name="q${index}"]:checked`
@@ -61,11 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 `.question-block[data-index="${index}"]`
             );
 
-            // Clear previous highlighting
             questionBlock.classList.remove("wrong-answer", "correct-answer");
 
             if (!selected) {
-                allAnswered = false; // Not all questions are answered
+                allAnswered = false;
                 return;
             }
 
@@ -85,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const score = (correctCount / questions.length) * 100;
 
         if (score >= 70) {
-            window.location.href = "/pages/finish.html";
+            window.location.href = "/pages/final.html";
         } else {
             alert(
                 `Your score is ${score.toFixed(

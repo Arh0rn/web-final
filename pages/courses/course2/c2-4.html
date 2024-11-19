@@ -80,12 +80,12 @@
         }
 
         if (selectedOption.value === "c") {
-          mainContent.style.backgroundColor = "#adf7c6"; // Correct answer feedback (green)
+          document.body.style.backgroundColor = "#adf7c6";
           feedback.style.display = "block";
           feedback.textContent =
             "Congratulations! That is the correct answer🥳";
         } else {
-          mainContent.style.backgroundColor = "#ffdbdb"; // Incorrect answer feedback (red)
+          document.body.style.backgroundColor = "#ffdbdb";
           feedback.style.display = "block";
           feedback.textContent = "Everyone makes mistakes😃";
         }

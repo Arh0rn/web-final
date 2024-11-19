@@ -1,7 +1,6 @@
-/* Footer Styles */
 footer {
-  background-color: #343a40; /* Dark background to match header */
-  color: #fff; /* White text */
+  background-color: #343a40;
+  color: #fff;
   padding: 1rem 0;
   text-align: center;
 }
@@ -45,10 +44,9 @@ footer {
 }
 
 .footer-links a:hover {
-  color: #ffc107; /* Highlight color on hover */
+  color: #ffc107;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
